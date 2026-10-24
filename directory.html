@@ -448,8 +448,20 @@ phone.href = "tel:" + business.phone.replace(/\s/g, "");
 phone.textContent = "☎ Call " + business.phone;
 phone.setAttribute("aria-label", "Call " + business.name);
 
+
 card.append(category, heading, description, address, phone);
+
+if (business.website) {
+  const websiteLink = document.createElement("a");
+  websiteLink.href = business.website;
+  websiteLink.textContent = "Visit website ↗";
+  websiteLink.target = "_blank";
+  websiteLink.rel = "noopener noreferrer";
+  card.appendChild(websiteLink);
+}
+
 businessList.appendChild(card);
+
 
       });
     }

@@ -434,14 +434,21 @@ const businesses = [
         const heading = document.createElement("h3");
         heading.textContent = business.name;
 
-        const description = document.createElement("p");
-        description.textContent = business.description;
+        
+const description = document.createElement("p");
+description.textContent = business.description;
 
-        const note = document.createElement("p");
-        note.textContent = "Sample entry — details not yet verified.";
+const address = document.createElement("p");
+address.textContent = "📍 " + business.address;
 
-        card.append(category, heading, description, note);
-        businessList.appendChild(card);
+const phone = document.createElement("a");
+phone.href = "tel:" + business.phone.replace(/\s/g, "");
+phone.textContent = "☎ Call " + business.phone;
+phone.setAttribute("aria-label", "Call " + business.name);
+
+card.append(category, heading, description, address, phone);
+businessList.appendChild(card);
+
       });
     }
 

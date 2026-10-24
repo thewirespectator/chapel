@@ -1,1 +1,425 @@
 
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore local businesses and services in Chapel-en-le-Frith, Derbyshire. Find shops, food and drink, trades and more.">
+  <title>Local Business Directory | Discover Chapel</title>
+  <style>
+    :root {
+      --green: #173e35;
+      --light-green: #eaf0e6;
+      --cream: #f7f8f5;
+      --text: #23312c;
+      --muted: #647168;
+      --border: #e0e6df;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--green);
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .back-link {
+      font-size: .95rem;
+    }
+
+    .hero {
+      background: var(--light-green);
+      padding: 55px 7% 45px;
+    }
+
+    .eyebrow {
+      color: #386653;
+      font-weight: bold;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      color: var(--green);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      margin: 10px 0;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #4f5e54;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 35px 22px 65px;
+    }
+
+    .notice {
+      padding: 13px 15px;
+      margin-bottom: 25px;
+      border: 1px solid #d6dfc7;
+      border-radius: 8px;
+      background: #f0f4e9;
+      color: #3b5140;
+      font-size: .9rem;
+    }
+
+    .search-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(190px, .4fr);
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #cbd5cc;
+      border-radius: 7px;
+      background: white;
+      color: var(--text);
+      font: inherit;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid #54846b;
+      outline-offset: 2px;
+    }
+
+    .results-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 24px 0 15px;
+    }
+
+    .results-line h2 {
+      color: var(--green);
+      font-size: 1.35rem;
+    }
+
+    #result-count {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 18px;
+    }
+
+    .business-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 220px;
+    }
+
+    .category {
+      display: inline-block;
+      background: var(--light-green);
+      color: var(--green);
+      padding: 4px 9px;
+      border-radius: 20px;
+      font-size: .78rem;
+      font-weight: bold;
+      margin-bottom: 13px;
+    }
+
+    .business-card h3 {
+      font-size: 1.15rem;
+      color: var(--green);
+      margin-bottom: 7px;
+    }
+
+    .business-card p {
+      color: var(--muted);
+      font-size: .93rem;
+      margin-bottom: 13px;
+    }
+
+    .business-card a {
+      color: #23634f;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: auto;
+    }
+
+    .business-card a:hover {
+      text-decoration: underline;
+    }
+
+    .empty {
+      padding: 35px 15px;
+      text-align: center;
+      color: var(--muted);
+      background: white;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .empty h3 {
+      color: var(--green);
+      margin-bottom: 5px;
+    }
+
+    .submit-section {
+      margin-top: 40px;
+      padding: 25px;
+      border-radius: 10px;
+      background: var(--light-green);
+    }
+
+    .submit-section h2 {
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .submit-section p {
+      margin-bottom: 12px;
+    }
+
+    .submit-section a {
+      color: #23634f;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 25px 7%;
+      background: var(--green);
+      color: white;
+      font-size: .9rem;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .search-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 40px 6%;
+      }
+
+      main {
+        padding: 25px 16px 45px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="index.html">Discover Chapel</a>
+    <a class="back-link" href="index.html">← Back to homepage</a>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Support local</p>
+    <h1>Chapel Business Directory</h1>
+    <p>Discover local shops, places to eat, independent businesses and useful services in Chapel-en-le-Frith and the surrounding area.</p>
+  </section>
+
+  <main>
+    <div class="notice">
+      <strong>Directory preview:</strong> the entries below are sample listings used to demonstrate the website. They are not verified local businesses yet.
+    </div>
+
+    <section aria-label="Search businesses">
+      <div class="search-panel">
+        <input
+          type="search"
+          id="search"
+          placeholder="Search businesses or services..."
+          aria-label="Search businesses or services"
+        >
+
+        <select id="category" aria-label="Filter by category">
+          <option value="all">All categories</option>
+          <option value="Food & Drink">Food &amp; drink</option>
+          <option value="Shops">Shops</option>
+          <option value="Trades">Trades &amp; home services</option>
+          <option value="Health & Beauty">Health &amp; beauty</option>
+          <option value="Other Services">Other services</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="results-line">
+      <h2>Browse local businesses</h2>
+      <p id="result-count" aria-live="polite"></p>
+    </div>
+
+    <div id="business-list" class="business-grid"></div>
+
+    <section class="submit-section">
+      <h2>Own a local business?</h2>
+      <p>We plan to add a way for local businesses to request a listing. For now, this directory is being developed and the sample entries need replacing with verified details.</p>
+      <a href="index.html">Return to Discover Chapel →</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Discover Chapel-en-le-Frith</strong></p>
+    <p>An independent local guide to Chapel-en-le-Frith, Derbyshire.</p>
+    <p><a href="index.html">Homepage</a></p>
+  </footer>
+
+  <script>
+    // These are demonstration entries, not real business listings.
+    // Replace them with verified local businesses before launch.
+
+    const businesses = [
+      {
+        name: "Example Café",
+        category: "Food & Drink",
+        description: "Demonstration listing for a local café or coffee shop.",
+        keywords: "coffee tea breakfast lunch cafe"
+      },
+      {
+        name: "Example Pub & Restaurant",
+        category: "Food & Drink",
+        description: "Demonstration listing for a pub or restaurant.",
+        keywords: "pub food dinner restaurant drinks"
+      },
+      {
+        name: "Example Independent Shop",
+        category: "Shops",
+        description: "Demonstration listing for an independent retailer.",
+        keywords: "shopping gifts retail shop"
+      },
+      {
+        name: "Example Home Services",
+        category: "Trades",
+        description: "Demonstration listing for a local tradesperson.",
+        keywords: "plumber electrician builder repairs home"
+      },
+      {
+        name: "Example Hair & Beauty",
+        category: "Health & Beauty",
+        description: "Demonstration listing for a hair or beauty service.",
+        keywords: "hairdresser barber beauty salon"
+      },
+      {
+        name: "Example Local Service",
+        category: "Other Services",
+        description: "Demonstration listing for a local service provider.",
+        keywords: "business services professional local"
+      }
+    ];
+
+    const searchInput = document.getElementById("search");
+    const categorySelect = document.getElementById("category");
+    const businessList = document.getElementById("business-list");
+    const resultCount = document.getElementById("result-count");
+
+    function renderBusinesses() {
+      const query = searchInput.value.trim().toLowerCase();
+      const selectedCategory = categorySelect.value;
+
+      const filtered = businesses.filter(function (business) {
+        const searchableText = (
+          business.name + " " +
+          business.category + " " +
+          business.description + " " +
+          business.keywords
+        ).toLowerCase();
+
+        const matchesSearch = searchableText.includes(query);
+        const matchesCategory =
+          selectedCategory === "all" ||
+          business.category === selectedCategory;
+
+        return matchesSearch && matchesCategory;
+      });
+
+      resultCount.textContent =
+        filtered.length + (filtered.length === 1 ? " sample listing" : " sample listings");
+
+      businessList.replaceChildren();
+
+      if (filtered.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "empty";
+
+        const heading = document.createElement("h3");
+        heading.textContent = "No matching businesses";
+        const message = document.createElement("p");
+        message.textContent = "Try another search or choose a different category.";
+
+        empty.append(heading, message);
+        businessList.appendChild(empty);
+        return;
+      }
+
+      filtered.forEach(function (business) {
+        const card = document.createElement("article");
+        card.className = "business-card";
+
+        const category = document.createElement("span");
+        category.className = "category";
+        category.textContent = business.category;
+
+        const heading = document.createElement("h3");
+        heading.textContent = business.name;
+
+        const description = document.createElement("p");
+        description.textContent = business.description;
+
+        const note = document.createElement("p");
+        note.textContent = "Sample entry — details not yet verified.";
+
+        card.append(category, heading, description, note);
+        businessList.appendChild(card);
+      });
+    }
+
+    searchInput.addEventListener("input", renderBusinesses);
+    categorySelect.addEventListener("change", renderBusinesses);
+
+    renderBusinesses();
+  </script>
+
+</body>
+</html>

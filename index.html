@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Chapel-en-le-Frith in the Peak District. Explore local walks, places to eat, history and things to do.">
+  <title>Discover Chapel-en-le-Frith | Your Local Guide</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #23312c;
+      background: #f7f8f5;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #173e35;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      min-height: 420px;
+      padding: 85px 8%;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(15, 39, 32, .88), rgba(15, 39, 32, .25)),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85")
+        center 55% / cover;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .8rem;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #d8e8a7;
+      color: #173e35;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 65px 8%;
+    }
+
+    .section-heading {
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
+      color: #66736c;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e4e8e1;
+    }
+
+    .card-content {
+      padding: 23px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      color: #173e35;
+    }
+
+    .card p {
+      color: #58665e;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      color: #23634f;
+      font-weight: bold;
+    }
+
+    .welcome {
+      background: #eaf0e6;
+    }
+
+    .welcome p {
+      max-width: 750px;
+      margin-top: 12px;
+    }
+
+    footer {
+      background: #173e35;
+      color: white;
+      padding: 30px 8%;
+      font-size: .9rem;
+    }
+
+    footer p + p {
+      margin-top: 6px;
+      color: #d5e0d8;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 14px;
+      }
+
+      .hero, section {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      .hero {
+        min-height: 390px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Discover Chapel</div>
+    <nav>
+      <a href="#explore">Explore</a>
+      <a href="#about">About Chapel</a>
+      <a href="#local">Local life</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">The Peak District · Derbyshire</p>
+        <h1>Discover<br>Chapel-en-le-Frith</h1>
+        <p>Your guide to local places, countryside walks, independent businesses and life in the historic Peak District town.</p>
+        <a class="button" href="#explore">Explore the town ↓</a>
+      </div>
+    </section>
+
+    <section id="explore">
+      <div class="section-heading">
+        <h2>Explore Chapel</h2>
+        <p>Ideas for discovering our town and the surrounding countryside.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-content">
+            <h3>🥾 Walks & countryside</h3>
+            <p>Find walking routes, scenic viewpoints and ways to explore the Peak District.</p>
+            <a href="https://www.peakdistrict.gov.uk/visiting" target="_blank" rel="noopener noreferrer">Explore the Peak District ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <h3>☕ Food & drink</h3>
+            <p>Discover cafés, pubs, restaurants and places to stop for a bite to eat.</p>
+            <a href="#local">Explore local life ↓</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <h3>🏛️ History & heritage</h3>
+            <p>Learn about the town's past, historic streets and local heritage.</p>
+            <a href="https://www.heritagegateway.org.uk/" target="_blank" rel="noopener noreferrer">Explore heritage records ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="welcome" id="about">
+      <div class="section-heading">
+        <h2>A town worth exploring</h2>
+      </div>
+      <p>Chapel-en-le-Frith is a historic market town in the High Peak of Derbyshire, surrounded by the landscapes of the Peak District. Whether you live locally or are just visiting, this guide aims to help you find something new to discover.</p>
+    </section>
+
+    <section id="local">
+      <div class="section-heading">
+        <h2>Local life</h2>
+        <p>Help support the businesses and community that make Chapel special.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-content">
+            <h3>Local businesses</h3>
+            <p>A directory of local shops, cafés, tradespeople and independent services is coming soon.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <h3>What's on?</h3>
+            <p>Find community events, local clubs, activities and things happening around town.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <h3>Know something local?</h3>
+            <p>Have a suggestion for the guide? Get in touch and help us improve it.</p>
+            <a href="mailto:hello@example.com">Suggest an update ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Discover Chapel-en-le-Frith</strong></p>
+    <p>An independent guide to our town in Derbyshire.</p>
+  </footer>
+
+</body>
+</html>
